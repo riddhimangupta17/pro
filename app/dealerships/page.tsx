@@ -114,7 +114,7 @@ export default function DealershipsPage() {
               width="100%"
               height="450"
               style={{ border: 0 }}
-              allowFullScreen={false}
+              allowFullScreen={true}
               loading="lazy"
               title="Celesté Motors Dealership Locations across India"
             ></iframe>

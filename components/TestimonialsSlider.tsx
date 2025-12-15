@@ -61,9 +61,9 @@ export default function TestimonialsSlider() {
   return (
     <div className="relative max-w-4xl mx-auto">
       <div className="bg-slate-50 rounded-lg shadow-xl p-8 md:p-12">
-        <div className="text-center mb-6">
+        <div className="text-center mb-6" aria-label={`Rating: ${testimonials[currentIndex].rating} out of 5 stars`}>
           {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-            <span key={i} className="text-yellow-400 text-2xl">★</span>
+            <span key={i} className="text-yellow-400 text-2xl" aria-hidden="true">★</span>
           ))}
         </div>
         

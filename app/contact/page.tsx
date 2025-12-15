@@ -10,11 +10,12 @@ export default function ContactPage() {
     subject: "",
     message: "",
   });
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // This is a static form - no actual submission
-    alert("Thank you for your interest! This is a demo form. In production, your message would be sent to our team.");
+    setShowSuccess(true);
     setFormData({
       name: "",
       email: "",
@@ -22,6 +23,11 @@ export default function ContactPage() {
       subject: "",
       message: "",
     });
+    
+    // Hide success message after 5 seconds
+    setTimeout(() => {
+      setShowSuccess(false);
+    }, 5000);
   };
 
   const handleChange = (
@@ -211,6 +217,22 @@ export default function ContactPage() {
             {/* Contact Form */}
             <div className="bg-white rounded-lg shadow-xl p-8">
               <h2 className="text-3xl font-bold mb-6 text-slate-900">Send Us a Message</h2>
+              
+              {/* Success Message */}
+              {showSuccess && (
+                <div className="mb-6 bg-green-50 border-l-4 border-green-500 p-4 rounded">
+                  <div className="flex items-center">
+                    <svg className="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <div>
+                      <p className="font-semibold text-green-800">Thank you for your interest!</p>
+                      <p className="text-sm text-green-700">This is a demo form. In production, your message would be sent to our team.</p>
+                    </div>
+                  </div>
+                </div>
+              )}
+              
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
