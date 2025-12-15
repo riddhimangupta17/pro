@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Celesté Motors - Official Website
 
-## Getting Started
+A modern, fully responsive static website for Celesté Motors, a premium Indian automotive manufacturer. Built with Next.js, TypeScript, and TailwindCSS.
 
-First, run the development server:
+## 🚗 About Celesté Motors
 
+Celesté Motors is dedicated to making luxury accessible. We offer premium sedans and high-performance sports cars with innovative technology and competitive pricing.
+
+## ✨ Features
+
+- **8 Fully Responsive Pages:**
+  - Home - Hero banner with testimonials slider
+  - About Us - Company story and milestones
+  - Innovation - Cutting-edge technologies showcase
+  - R&D - Research and development achievements
+  - Models - Premium sedans and sports cars catalog
+  - Customization - Interactive vehicle configurator with real-time price calculator
+  - Dealerships - Location finder with Google Maps integration
+  - Contact - Contact form and information
+
+- **Interactive Features:**
+  - Auto-rotating testimonials slider
+  - JavaScript-powered price calculator on customization page
+  - Dynamic model filtering (Sedans/Sports Cars)
+  - City-based dealership filters
+  - Responsive navigation with mobile menu
+  - Smooth scrolling and animations
+
+- **Technical Highlights:**
+  - Built with Next.js 16 and TypeScript
+  - Styled with TailwindCSS 4
+  - Fully static export for fast hosting
+  - SEO optimized with meta tags
+  - Accessibility features (ARIA labels, keyboard navigation)
+  - Mobile-first responsive design
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 20+ and npm
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/riddhimangupta17/pro.git
+cd pro
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-## Learn More
+### Build for Production
 
-To learn more about Next.js, take a look at the following resources:
+Generate a static export:
+```bash
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The static files will be generated in the `out/` directory.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📁 Project Structure
 
-## Deploy on Vercel
+```
+pro/
+├── app/                      # Next.js app directory
+│   ├── about/               # About Us page
+│   ├── contact/             # Contact page
+│   ├── customization/       # Vehicle customization page
+│   ├── dealerships/         # Dealership locations page
+│   ├── innovation/          # Innovation showcase page
+│   ├── models/              # Vehicle models page
+│   ├── research-development/ # R&D page
+│   ├── layout.tsx           # Root layout
+│   ├── page.tsx             # Home page
+│   └── globals.css          # Global styles
+├── components/              # Reusable React components
+│   ├── Navbar.tsx           # Navigation component
+│   ├── Footer.tsx           # Footer component
+│   └── TestimonialsSlider.tsx # Testimonials carousel
+├── public/                  # Static assets
+│   └── images/              # Image assets
+└── next.config.ts           # Next.js configuration
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🎨 Design Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Color Scheme:** Navy blue and slate with blue accents
+- **Typography:** Inter font family for clean, modern look
+- **Responsive Breakpoints:** Mobile, tablet, and desktop optimized
+- **Animations:** Smooth transitions and fade-in effects
+- **Icons:** SVG-based icons for crisp display
+
+## 🚢 Deployment
+
+This static site can be deployed on:
+- **GitHub Pages** - Add the `out/` directory contents
+- **Netlify** - Connect repository and deploy
+- **Vercel** - One-click deployment from GitHub
+
+## 📄 License
+
+© 2025 Celesté Motors. All rights reserved.
+
+## 🤝 Contributing
+
+This is a demonstration project. For inquiries, contact: info@celestemotors.in
